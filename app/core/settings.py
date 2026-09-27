@@ -6,9 +6,7 @@ class Settings(BaseSettings):
     
     APP_NAME: str 
     DATABASE_URL: str
-    ADMIN_EMAIL: str
     SECRET_KEY: str
-    ADMIN_PASSWORD: str
 
 settings = Settings()  # pyright: ignore[reportCallIssue]
     
