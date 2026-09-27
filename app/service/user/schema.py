@@ -5,7 +5,7 @@ from pydantic import BaseModel, ConfigDict, EmailStr, Field
 
 class UserCreate(BaseModel):
     name: str | None = Field(default=None, max_length=100)
-    email_address: EmailStr
+    email: EmailStr
     password: str = Field(min_length=12, max_length=128)
 
 
@@ -14,5 +14,10 @@ class UserRead(BaseModel):
 
     id: int
     name: str | None
-    email_address: EmailStr
+    email: EmailStr
     created_at: datetime
+
+class UserLogin(BaseModel):
+    email: EmailStr
+    password: str = Field(min_length=12, max_length=128)
+    
