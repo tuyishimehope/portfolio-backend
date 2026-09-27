@@ -1,10 +1,8 @@
 from fastapi import APIRouter, HTTPException, status
 
 from app.db.dependency import DBSession
-
 from app.service.user.schema import UserCreate, UserLogin, UserRead
 from app.service.user.service import authenticate_user, create_user
-
 
 AUTH_ROUTER = APIRouter(prefix="/api/v1/auth", tags=["Authentication"])
 

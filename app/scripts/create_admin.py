@@ -1,4 +1,7 @@
-import argparse, getpass, sys
+import argparse
+import getpass
+import sys
+
 from sqlalchemy import select
 
 from app.db.engine import SessionLocal
